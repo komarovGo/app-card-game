@@ -1,0 +1,273 @@
+@font-face {
+  font-family: "StratosSkyeng";
+  src: url(/fonts/stratosskyeng-regular.otf) format("ttf"), url(/fonts/stratosskyengweb-regular.woff) format("woff");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "StratosSkyeng";
+  src: url(/fonts/stratosskyeng-medium.otf) format("ttf"), url(/fonts/stratosskyengweb-medium.woff) format("woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "StratosSkyeng";
+  src: url(/fonts/stratosskyeng-bold.otf) format("ttf"), url(/fonts/stratosskyengweb-bold.woff2) format("woff");
+  font-weight: 700;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  background-color: #004980;
+  justify-content: space-evenly;
+}
+.wrapper__screen1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content__screen1 {
+  width: 480px;
+  height: 459px;
+  background-color: #C2F5FF;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.content__screen2 {
+  padding: 22px;
+}
+
+.title_text {
+  font-family: "StratosSkyeng";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  color: #004980;
+  text-align: center;
+}
+
+.namber_lvl {
+  display: flex;
+  gap: 24px;
+}
+
+.button__level-selection {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  border: transparent;
+  font-family: "StratosSkyeng";
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 72px;
+  color: #0080C1;
+}
+
+.button {
+  width: 246px;
+  height: 50px;
+  background: #7AC100;
+  border-radius: 12px;
+  border: transparent;
+  font-family: "StratosSkyeng";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.watch {
+  font-family: "StratosSkyeng";
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 72px;
+  color: #FFFFFF;
+  position: relative;
+  bottom: 15px;
+}
+.watch__finish {
+  color: black;
+}
+
+.min-sec {
+  font-family: "StratosSkyeng";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5px;
+}
+
+.min {
+  padding-right: 55px;
+}
+
+.ryad {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.field-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 90vh;
+}
+
+.card-box {
+  width: 95px;
+  height: 133px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_bagraund {
+  width: 83px;
+  height: 121px;
+  background-image: url(./img/cover-card.svg);
+  background-position: center;
+  background-size: cover;
+  background-color: #E4FBFF;
+  border-radius: 4px;
+}
+
+.h2 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.card {
+  width: 83px;
+  height: 121px;
+  background-position: center;
+  background-color: #E4FBFF;
+  border-radius: 4px;
+}
+.card__t-v {
+  background-image: url(./img/card/P/TP.svg);
+}
+.card__k-v {
+  background-image: url(./img/card/P/KP.svg);
+}
+.card__d-v {
+  background-image: url(./img/card/P/DP.svg);
+}
+.card__v-v {
+  background-image: url(./img/card/P/JP.svg);
+}
+.card__10-v {
+  background-image: url(./img/card/P/10P.svg);
+}
+.card__9-v {
+  background-image: url(./img/card/P/9P.svg);
+}
+.card__8-v {
+  background-image: url(./img/card/P/8P.svg);
+}
+.card__7-v {
+  background-image: url(./img/card/P/7P.svg);
+}
+.card__6-v {
+  background-image: url(./img/card/P/6P.svg);
+}
+.card__t-ch {
+  background-image: url(./img/card/ch/t-ch.svg);
+}
+.card__k-ch {
+  background-image: url(./img/card/ch/k-ch.svg);
+}
+.card__d-ch {
+  background-image: url(./img/card/ch/d-ch.svg);
+}
+.card__v-ch {
+  background-image: url(./img/card/ch/v-ch.svg);
+}
+.card__10-ch {
+  background-image: url(./img/card/ch/10-ch.svg);
+}
+.card__9-ch {
+  background-image: url(./img/card/ch/9-ch.svg);
+}
+.card__8-ch {
+  background-image: url(./img/card/ch/8-ch.svg);
+}
+.card__7-ch {
+  background-image: url(./img/card/ch/7-ch.svg);
+}
+.card__6-ch {
+  background-image: url(./img/card/ch/6-ch.svg);
+}
+.card__t-b {
+  background-image: url(./img/card/b/t-b.svg);
+}
+.card__k-b {
+  background-image: url(./img/card/b/k-b.svg);
+}
+.card__d-b {
+  background-image: url(./img/card/b/d-b.svg);
+}
+.card__v-b {
+  background-image: url(./img/card/b/v-b.svg);
+}
+.card__10-b {
+  background-image: url(./img/card/b/10-b.svg);
+}
+.card__9-b {
+  background-image: url(./img/card/b/9-b.svg);
+}
+.card__8-b {
+  background-image: url(./img/card/b/8-b.svg);
+}
+.card__7-b {
+  background-image: url(./img/card/b/7-b.svg);
+}
+.card__6-b {
+  background-image: url(./img/card/b/6-b.svg);
+}
+.card__t-k {
+  background-image: url(./img/card/k/TK.svg);
+}
+.card__k-k {
+  background-image: url(./img/card/k/KK.svg);
+}
+.card__d-k {
+  background-image: url(./img/card/k/DK.svg);
+}
+.card__v-k {
+  background-image: url(./img/card/k/VK.svg);
+}
+.card__10-k {
+  background-image: url(./img/card/k/10K.svg);
+}
+.card__9-k {
+  background-image: url(./img/card/k/9K.svg);
+}
+.card__8-k {
+  background-image: url(./img/card/k/8K.svg);
+}
+.card__7-k {
+  background-image: url(./img/card/k/7K.svg);
+}
+.card__6-k {
+  background-image: url(./img/card/k/6K.svg);
+}/*# sourceMappingURL=style.css.map */
