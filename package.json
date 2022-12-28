@@ -1,0 +1,33 @@
+{
+  "name": "git-task1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write ./",
+    "lint:js": "eslint ./**/*.js",
+    "lint:css": "stylelint ./**/*.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckarnishon/skypro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ckarnishon/skypro/issues"
+  },
+  "homepage": "https://github.com/ckarnishon/skypro#readme",
+  "devDependencies": {
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.1",
+    "stylelint": "^14.16.0",
+    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-prettier": "^2.0.0"
+  }
+}

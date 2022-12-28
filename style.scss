@@ -1,360 +1,331 @@
 @font-face {
-  font-family: 'StratosSkyeng';
-  src: url(/fonts/stratosskyeng-regular.otf) format('ttf'), url(/fonts/stratosskyengweb-regular.woff) format('woff');
-  font-weight: 500;
+    font-family: 'StratosSkyeng';
+    src: url(/fonts/stratosskyeng-regular.otf) format('ttf'),
+        url(/fonts/stratosskyengweb-regular.woff) format('woff');
+    font-weight: 500;
 }
 
 @font-face {
-  font-family: 'StratosSkyeng';
-  src: url(/fonts/stratosskyeng-medium.otf) format('ttf'), url(/fonts/stratosskyengweb-medium.woff) format('woff');
-  font-weight: 400;
+    font-family: 'StratosSkyeng';
+    src: url(/fonts/stratosskyeng-medium.otf) format('ttf'),
+        url(/fonts/stratosskyengweb-medium.woff) format('woff');
+    font-weight: 400;
 }
 
 @font-face {
-  font-family: 'StratosSkyeng';
-  src: url(/fonts/stratosskyeng-bold.otf) format('ttf'), url(/fonts/stratosskyengweb-bold.woff2) format('woff');
-  font-weight: 700;
+    font-family: 'StratosSkyeng';
+    src: url(/fonts/stratosskyeng-bold.otf) format('ttf'),
+        url(/fonts/stratosskyengweb-bold.woff2) format('woff');
+    font-weight: 700;
 }
-
-
-
-
 
 * {
-  padding: 0px;
-  margin: 0px;
+    padding: 0px;
+    margin: 0px;
 }
 
 .wrapper {
-  height: 100vh;
-  width: 100%;
-  background-color: #004980;
-  justify-content: space-evenly;
-  &__screen1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &__screen2 {}
-  &__screen4{}
-}
-
-
-.content {
-
-  &__screen1 {
-    width: 480px;
-    height: 459px;
-    background-color: #C2F5FF;
-    border-radius: 12px;
-
-    display: flex;
-    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: #004980;
     justify-content: space-evenly;
-    align-items: center;
-  }
-
-  &__screen2 {
-    padding: 22px;
-  }
-}
-
-
-.title_text {
-
-  font-family: 'StratosSkyeng';
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 48px;
-  color: #004980;
-  text-align: center;
-}
-
-.namber_lvl {
-  display: flex;
-  gap: 24px;
-}
-
-.button__lvl {
-  width: 100px;
-  height: 100px;
-  border-radius: 12px;
-  border: transparent;
-
-
-  font-family: 'StratosSkyeng';
-  font-weight: 400;
-  font-size: 64px;
-  line-height: 72px;
-  color: #0080C1;
-
-}
-
-.add__color{
-  background-color: darkblue;
-}
-
-
-.button {
-  width: 246px;
-  height: 50px;
-  background: #7AC100;
-  border-radius: 12px;
-  border: transparent;
-  font-family: 'StratosSkyeng';
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 32px;
-  color: #ffff;
-    &__hiding{
-      background-color: gray;
+    &__screen1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
+.content {
+    &__screen1 {
+        width: 480px;
+        height: 459px;
+        background-color: #c2f5ff;
+        border-radius: 12px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    &__screen2 {
+        padding: 22px;
+    }
+}
+
+.title_text {
+    font-family: 'StratosSkyeng';
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    color: #004980;
+    text-align: center;
+}
+
+.namber_lvl {
+    display: flex;
+    gap: 24px;
+}
+
+.button__lvl {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    border: transparent;
+    cursor: pointer;
+    font-family: 'StratosSkyeng';
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 72px;
+    color: #0080c1;
+}
+
+.add__color {
+    background-color: darkblue;
+}
+
+.button {
+    cursor: pointer;
+    width: 246px;
+    height: 50px;
+    background: #7ac100;
+    border-radius: 12px;
+    border: transparent;
+    font-family: 'StratosSkyeng';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #ffff;
+    &__hiding {
+        background-color: gray;
+    }
+}
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .watch {
-  font-family: 'StratosSkyeng';
-  font-weight: 400;
-  font-size: 64px;
-  line-height: 72px;
-  color: #FFFFFF;
-  position: relative;
-  bottom: 15px;
+    font-family: 'StratosSkyeng';
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 72px;
+    color: #ffffff;
+    position: relative;
+    bottom: 15px;
 
-  &__finish{
-    color:black ;
-  }
+    &__finish {
+        color: black;
+    }
 }
 
 .min-sec {
-  font-family: 'StratosSkyeng';
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
-  color: #FFFFFF;
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 5px;
-
+    font-family: 'StratosSkyeng';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #ffffff;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5px;
 }
 
 .min {
-  padding-right: 55px;
+    padding-right: 55px;
 }
 
 .ryad {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .field-card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 90vh;
 }
 
-
 .card-box {
-  width: 95px;
-  height: 133px;
-  background: #FFFFFF;
-  border-radius: 4px;
+    width: 95px;
+    height: 133px;
+    background: #ffffff;
+    border-radius: 4px;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .card_bagraund {
-  width: 83px;
-  height: 121px;
-  background-image: url(./img/cover-card.svg);
-  background-position: center;
-  background-size: cover;
-  background-color: #E4FBFF;
-  border-radius: 4px;
+    width: 83px;
+    height: 121px;
+    background-image: url(./img/cover-card.svg);
+    background-position: center;
+    background-size: cover;
+    background-color: #e4fbff;
+    border-radius: 4px;
 }
 
-.h2{
-  font-size: 24px;
-line-height: 32px;
-
+.h2 {
+    font-size: 24px;
+    line-height: 32px;
 }
-// все карты 
+// все карты
 .card {
-  width: 83px;
-  height: 121px;
-  background-position: center;
-  background-color: #E4FBFF;
-  border-radius: 4px;
+    width: 83px;
+    height: 121px;
+    background-position: center;
+    background-color: #e4fbff;
+    border-radius: 4px;
 
-  &__t-v {
-    background-image: url(./img/card/P/TP.svg);
-  }
+    &__t-v {
+        background-image: url(./img/card/P/TP.svg);
+    }
 
-  &__k-v {
-    background-image: url(./img/card/P/KP.svg);
-  }
+    &__k-v {
+        background-image: url(./img/card/P/KP.svg);
+    }
 
-  &__d-v {
-    background-image: url(./img/card/P/DP.svg);
-  }
+    &__d-v {
+        background-image: url(./img/card/P/DP.svg);
+    }
 
-  &__v-v {
-    background-image: url(./img/card/P/JP.svg);
-  }
+    &__v-v {
+        background-image: url(./img/card/P/JP.svg);
+    }
 
-  &__10-v {
-    background-image: url(./img/card/P/10P.svg);
-  }
+    &__10-v {
+        background-image: url(./img/card/P/10P.svg);
+    }
 
-  &__9-v {
-    background-image: url(./img/card/P/9P.svg);
-  }
+    &__9-v {
+        background-image: url(./img/card/P/9P.svg);
+    }
 
-  &__8-v {
-    background-image: url(./img/card/P/8P.svg);
-  }
+    &__8-v {
+        background-image: url(./img/card/P/8P.svg);
+    }
 
-  &__7-v {
-    background-image: url(./img/card/P/7P.svg);
-  }
+    &__7-v {
+        background-image: url(./img/card/P/7P.svg);
+    }
 
-  &__6-v {
-    background-image: url(./img/card/P/6P.svg);
-  }
+    &__6-v {
+        background-image: url(./img/card/P/6P.svg);
+    }
 
+    &__t-ch {
+        background-image: url(./img/card/ch/t-ch.svg);
+    }
 
+    &__k-ch {
+        background-image: url(./img/card/ch/k-ch.svg);
+    }
 
+    &__d-ch {
+        background-image: url(./img/card/ch/d-ch.svg);
+    }
 
+    &__v-ch {
+        background-image: url(./img/card/ch/v-ch.svg);
+    }
 
+    &__10-ch {
+        background-image: url(./img/card/ch/10-ch.svg);
+    }
 
+    &__9-ch {
+        background-image: url(./img/card/ch/9-ch.svg);
+    }
 
-  &__t-ch {
-    background-image: url(./img/card/ch/t-ch.svg);
-  }
+    &__8-ch {
+        background-image: url(./img/card/ch/8-ch.svg);
+    }
 
-  &__k-ch {
-    background-image: url(./img/card/ch/k-ch.svg);
-  }
+    &__7-ch {
+        background-image: url(./img/card/ch/7-ch.svg);
+    }
 
-  &__d-ch {
-    background-image: url(./img/card/ch/d-ch.svg);
-  }
+    &__6-ch {
+        background-image: url(./img/card/ch/6-ch.svg);
+    }
 
-  &__v-ch {
-    background-image: url(./img/card/ch/v-ch.svg);
-  }
+    &__t-b {
+        background-image: url(./img/card/b/t-b.svg);
+    }
 
-  &__10-ch {
-    background-image: url(./img/card/ch/10-ch.svg);
-  }
+    &__k-b {
+        background-image: url(./img/card/b/k-b.svg);
+    }
 
-  &__9-ch {
-    background-image: url(./img/card/ch/9-ch.svg);
-  }
+    &__d-b {
+        background-image: url(./img/card/b/d-b.svg);
+    }
 
-  &__8-ch {
-    background-image: url(./img/card/ch/8-ch.svg);
-  }
+    &__v-b {
+        background-image: url(./img/card/b/v-b.svg);
+    }
 
-  &__7-ch {
-    background-image: url(./img/card/ch/7-ch.svg);
-  }
+    &__10-b {
+        background-image: url(./img/card/b/10-b.svg);
+    }
 
-  &__6-ch {
-    background-image: url(./img/card/ch/6-ch.svg);
-  }
+    &__9-b {
+        background-image: url(./img/card/b/9-b.svg);
+    }
 
+    &__8-b {
+        background-image: url(./img/card/b/8-b.svg);
+    }
 
+    &__7-b {
+        background-image: url(./img/card/b/7-b.svg);
+    }
 
+    &__6-b {
+        background-image: url(./img/card/b/6-b.svg);
+    }
 
+    &__t-k {
+        background-image: url(./img/card/k/TK.svg);
+    }
 
-  &__t-b {
-    background-image: url(./img/card/b/t-b.svg);
-  }
+    &__k-k {
+        background-image: url(./img/card/k/KK.svg);
+    }
 
-  &__k-b {
-    background-image: url(./img/card/b/k-b.svg);
-  }
+    &__d-k {
+        background-image: url(./img/card/k/DK.svg);
+    }
 
-  &__d-b {
-    background-image: url(./img/card/b/d-b.svg);
-  }
+    &__v-k {
+        background-image: url(./img/card/k/VK.svg);
+    }
 
-  &__v-b {
-    background-image: url(./img/card/b/v-b.svg);
-  }
+    &__10-k {
+        background-image: url(./img/card/k/10K.svg);
+    }
 
-  &__10-b {
-    background-image: url(./img/card/b/10-b.svg);
-  }
+    &__9-k {
+        background-image: url(./img/card/k/9K.svg);
+    }
 
-  &__9-b {
-    background-image: url(./img/card/b/9-b.svg);
-  }
+    &__8-k {
+        background-image: url(./img/card/k/8K.svg);
+    }
 
-  &__8-b {
-    background-image: url(./img/card/b/8-b.svg);
-  }
+    &__7-k {
+        background-image: url(./img/card/k/7K.svg);
+    }
 
-  &__7-b {
-    background-image: url(./img/card/b/7-b.svg);
-  }
-
-  &__6-b {
-    background-image: url(./img/card/b/6-b.svg);
-  }
-
-
-
-
-  &__t-k {
-    background-image: url(./img/card/k/TK.svg);
-  }
-
-  &__k-k {
-    background-image: url(./img/card/k/KK.svg);
-  }
-
-  &__d-k {
-    background-image: url(./img/card/k/DK.svg);
-  }
-
-  &__v-k {
-    background-image: url(./img/card/k/VK.svg);
-  }
-
-  &__10-k {
-    background-image: url(./img/card/k/10K.svg);
-  }
-
-  &__9-k {
-    background-image: url(./img/card/k/9K.svg);
-  }
-
-  &__8-k {
-    background-image: url(./img/card/k/8K.svg);
-  }
-
-  &__7-k {
-    background-image: url(./img/card/k/7K.svg);
-  }
-
-  &__6-k {
-    background-image: url(./img/card/k/6K.svg);
-  }
+    &__6-k {
+        background-image: url(./img/card/k/6K.svg);
+    }
 }

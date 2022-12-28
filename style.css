@@ -29,10 +29,11 @@
   justify-content: center;
   align-items: center;
 }
+
 .content__screen1 {
   width: 480px;
   height: 459px;
-  background-color: #C2F5FF;
+  background-color: #c2f5ff;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -62,11 +63,12 @@
   height: 100px;
   border-radius: 12px;
   border: transparent;
+  cursor: pointer;
   font-family: "StratosSkyeng";
   font-weight: 400;
   font-size: 64px;
   line-height: 72px;
-  color: #0080C1;
+  color: #0080c1;
 }
 
 .add__color {
@@ -74,9 +76,10 @@
 }
 
 .button {
+  cursor: pointer;
   width: 246px;
   height: 50px;
-  background: #7AC100;
+  background: #7ac100;
   border-radius: 12px;
   border: transparent;
   font-family: "StratosSkyeng";
@@ -100,7 +103,7 @@
   font-weight: 400;
   font-size: 64px;
   line-height: 72px;
-  color: #FFFFFF;
+  color: #ffffff;
   position: relative;
   bottom: 15px;
 }
@@ -113,7 +116,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
-  color: #FFFFFF;
+  color: #ffffff;
   display: flex;
   justify-content: flex-end;
   padding-right: 5px;
@@ -140,7 +143,7 @@
 .card-box {
   width: 95px;
   height: 133px;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 4px;
   display: flex;
   flex-direction: row;
@@ -154,7 +157,7 @@
   background-image: url(./img/cover-card.svg);
   background-position: center;
   background-size: cover;
-  background-color: #E4FBFF;
+  background-color: #e4fbff;
   border-radius: 4px;
 }
 
@@ -167,7 +170,7 @@
   width: 83px;
   height: 121px;
   background-position: center;
-  background-color: #E4FBFF;
+  background-color: #e4fbff;
   border-radius: 4px;
 }
 .card__t-v {
