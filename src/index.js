@@ -1,9 +1,12 @@
 window.application = {
-    selecteLevel: {},
     blocks: {},
     screens: {},
+    levels: [],
+    watch: [],
+    cards: {},
+    clickUserCard: {},
+    container: document.querySelector('.app'),
     renderScreen: function (screenName) {
-        conteiner.innerHTML = '';
         this.screens[screenName]();
     },
     renderBlock: function (blockName, container) {
@@ -13,12 +16,8 @@ window.application = {
             this.blocks[blockName](container);
         }
     },
-    watch: [],
-    card: {},
-    clickUserCard: {},
 };
 
-const conteiner = document.querySelector('.conteiner');
 const buttonLvlSelec = document.querySelectorAll('.button__lvl');
 const btn1 = document.querySelector('.btn-1');
 const btn2 = document.querySelector('.btn-2');
@@ -29,17 +28,17 @@ buttonLvlSelec.forEach((btn) => {
         const target = event.target;
         const textContent = target.textContent;
         if (textContent === '1') {
-            window.application.selecteLevel = textContent;
+            window.application.levels = textContent;
             target.classList.add('add__color');
             btn2.classList.remove('add__color');
             btn3.classList.remove('add__color');
         } else if (textContent === '2') {
-            window.application.selecteLevel = textContent;
+            window.application.levels = textContent;
             target.classList.add('add__color');
             btn1.classList.remove('add__color');
             btn3.classList.remove('add__color');
         } else if (textContent === '3') {
-            window.application.selecteLevel = textContent;
+            window.application.levels = textContent;
             target.classList.add('add__color');
             btn1.classList.remove('add__color');
             btn2.classList.remove('add__color');
@@ -48,16 +47,17 @@ buttonLvlSelec.forEach((btn) => {
         buttonStart.classList.remove('button__hiding');
     });
 });
+console.log(window.application.levels);
 
 const buttonStart = document.querySelector('.button__start');
 buttonStart.disabled = true;
 
 buttonStart.addEventListener('click', () => {
-    if (window.application.selecteLevel === '1') {
-        window.application.renderScreen('renderScreenFieldShirtUp');
-    } else if (window.application.selecteLevel === '2') {
-        window.application.renderScreen('renderScreenFieldShirtUp');
-    } else if (window.application.selecteLevel === '3') {
-        location.href = '/screen2.html';
+    if (window.application.levels === '1') {
+        location.href = '/screen2copy.html';
+    } else if (window.application.levels === '2') {
+        // location.href = '/screen2copy.html';
+    } else if (window.application.levels === '3') {
+        location.href = '/screen2copy.html';
     }
 });

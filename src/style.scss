@@ -137,18 +137,21 @@
     padding-right: 55px;
 }
 
+.numbers {
+    display: flex;
+}
+
 .ryad {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .field-card {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 90vh;
 }
 
 .card-box {
@@ -166,7 +169,7 @@
 .card_bagraund {
     width: 83px;
     height: 121px;
-    background-image: url(../img/cover-card.svg);
+    // background-image: url(../static/cover-card.svg);
     background-position: center;
     background-size: cover;
     background-color: #e4fbff;
@@ -186,146 +189,146 @@
     border-radius: 4px;
 
     &__t-v {
-        background-image: url(../img/card/P/TP.svg);
+        // background-image: url(../static/card/P/туз\ пики.jpg);
     }
 
     &__k-v {
-        background-image: url(../img/card/P/KP.svg);
+        background-image: url(../static/card/P/KP.svg);
     }
 
     &__d-v {
-        background-image: url(../img/card/P/DP.svg);
+        background-image: url(../static/card/P/DP.svg);
     }
 
     &__v-v {
-        background-image: url(../img/card/P/JP.svg);
+        background-image: url(../static/card/P/JP.svg);
     }
 
     &__10-v {
-        background-image: url(../img/card/P/10P.svg);
+        background-image: url(../static/card/P/10P.svg);
     }
 
     &__9-v {
-        background-image: url(../img/card/P/9P.svg);
+        background-image: url(../static/card/P/9P.svg);
     }
 
     &__8-v {
-        background-image: url(../img/card/P/8P.svg);
+        background-image: url(../static/card/P/8P.svg);
     }
 
     &__7-v {
-        background-image: url(../img/card/P/7P.svg);
+        background-image: url(../static/card/P/7P.svg);
     }
 
     &__6-v {
-        background-image: url(../img/card/P/6P.svg);
+        background-image: url(../static/card/P/6P.svg);
     }
 
     &__t-ch {
-        background-image: url(../img/card/ch/t-ch.svg);
+        background-image: url(../static/card/ch/t-ch.svg);
     }
 
     &__k-ch {
-        background-image: url(../img/card/ch/k-ch.svg);
+        background-image: url(../static/card/ch/k-ch.svg);
     }
 
     &__d-ch {
-        background-image: url(../img/card/ch/d-ch.svg);
+        background-image: url(../static/card/ch/d-ch.svg);
     }
 
     &__v-ch {
-        background-image: url(../img/card/ch/v-ch.svg);
+        background-image: url(../static/card/ch/v-ch.svg);
     }
 
     &__10-ch {
-        background-image: url(../img/card/ch/10-ch.svg);
+        background-image: url(../static/card/ch/10-ch.svg);
     }
 
     &__9-ch {
-        background-image: url(../img/card/ch/9-ch.svg);
+        background-image: url(../static/card/ch/9-ch.svg);
     }
 
     &__8-ch {
-        background-image: url(../img/card/ch/8-ch.svg);
+        background-image: url(../static/card/ch/8-ch.svg);
     }
 
     &__7-ch {
-        background-image: url(../img/card/ch/7-ch.svg);
+        background-image: url(../static/card/ch/7-ch.svg);
     }
 
     &__6-ch {
-        background-image: url(../img/card/ch/6-ch.svg);
+        background-image: url(../static/card/ch/6-ch.svg);
     }
 
     &__t-b {
-        background-image: url(../img/card/b/t-b.svg);
+        background-image: url(../static/card/b/t-b.svg);
     }
 
     &__k-b {
-        background-image: url(../img/card/b/k-b.svg);
+        background-image: url(../static/card/b/k-b.svg);
     }
 
     &__d-b {
-        background-image: url(../img/card/b/d-b.svg);
+        background-image: url(../static/card/b/d-b.svg);
     }
 
     &__v-b {
-        background-image: url(../img/card/b/v-b.svg);
+        background-image: url(../static/card/b/v-b.svg);
     }
 
     &__10-b {
-        background-image: url(../img/card/b/10-b.svg);
+        background-image: url(../static/card/b/10-b.svg);
     }
 
     &__9-b {
-        background-image: url(../img/card/b/9-b.svg);
+        background-image: url(../static/card/b/9-b.svg);
     }
 
     &__8-b {
-        background-image: url(../img/card/b/8-b.svg);
+        background-image: url(../static/card/b/8-b.svg);
     }
 
     &__7-b {
-        background-image: url(../img/card/b/7-b.svg);
+        background-image: url(../static/card/b/7-b.svg);
     }
 
     &__6-b {
-        background-image: url(../img/card/b/6-b.svg);
+        background-image: url(../static/card/b/6-b.svg);
     }
 
     &__t-k {
-        background-image: url(../img/card/k/TK.svg);
+        background-image: url(../static/card/k/TK.svg);
     }
 
     &__k-k {
-        background-image: url(../img/card/k/KK.svg);
+        background-image: url(../static/card/k/KK.svg);
     }
 
     &__d-k {
-        background-image: url(../img/card/k/DK.svg);
+        background-image: url(../static/card/k/DK.svg);
     }
 
     &__v-k {
-        background-image: url(../img/card/k/VK.svg);
+        background-image: url(../static/card/k/VK.svg);
     }
 
     &__10-k {
-        background-image: url(../img/card/k/10K.svg);
+        background-image: url(../static/card/k/10K.svg);
     }
 
     &__9-k {
-        background-image: url(../img/card/k/9K.svg);
+        background-image: url(../static/card/k/9K.svg);
     }
 
     &__8-k {
-        background-image: url(../img/card/k/8K.svg);
+        background-image: url(../static/card/k/8K.svg);
     }
 
     &__7-k {
-        background-image: url(../img/card/k/7K.svg);
+        background-image: url(../static/card/k/7K.svg);
     }
 
     &__6-k {
-        background-image: url(../img/card/k/6K.svg);
+        background-image: url(../static/card/k/6K.svg);
     }
 }
