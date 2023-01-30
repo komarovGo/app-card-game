@@ -1,3 +1,4 @@
+
 window.application = {
     blocks: {},
     screens: {},
@@ -5,7 +6,6 @@ window.application = {
     watch: [],
     cards: {},
     clickUserCard: {},
-    container: document.querySelector('.app'),
     renderScreen: function (screenName) {
         this.screens[screenName]();
     },
@@ -18,46 +18,84 @@ window.application = {
     },
 };
 
-const buttonLvlSelec = document.querySelectorAll('.button__lvl');
-const btn1 = document.querySelector('.btn-1');
-const btn2 = document.querySelector('.btn-2');
-const btn3 = document.querySelector('.btn-3');
+// Начальный экран
+function oneScreen() {
+    const conteiner = document.querySelector('.conteiner');
+    conteiner.innerHTML = '';
+    const wrapper = document.createElement('div');
+    wrapper.classList = 'wrapper wrapper__screen1';
 
-buttonLvlSelec.forEach((btn) => {
-    btn.addEventListener('click', (event) => {
-        const target = event.target;
-        const textContent = target.textContent;
-        if (textContent === '1') {
-            window.application.levels = textContent;
-            target.classList.add('add__color');
-            btn2.classList.remove('add__color');
-            btn3.classList.remove('add__color');
-        } else if (textContent === '2') {
-            window.application.levels = textContent;
-            target.classList.add('add__color');
-            btn1.classList.remove('add__color');
-            btn3.classList.remove('add__color');
-        } else if (textContent === '3') {
-            window.application.levels = textContent;
-            target.classList.add('add__color');
-            btn1.classList.remove('add__color');
-            btn2.classList.remove('add__color');
-        }
-        buttonStart.disabled = false;
-        buttonStart.classList.remove('button__hiding');
+    const content = document.createElement('div');
+    content.classList = 'content content__screen1';
+
+    const title = document.createElement('h2');
+    title.classList = 'title';
+    title.textContent = 'Выбери сложность';
+
+    const menubuttons = document.createElement('div');
+    menubuttons.classList = 'button__lvl';
+
+    const btn1 = document.createElement('button');
+    btn1.classList = 'btn btn-1';
+    btn1.textContent = '1';
+
+    const btn2 = document.createElement('button');
+    btn2.classList = 'btn btn-2';
+    btn2.textContent = '2';
+
+    const btn3 = document.createElement('button');
+    btn3.classList = 'btn btn-3';
+    btn3.textContent = '3';
+
+    const buttonStartGame = document.createElement('button');
+    buttonStartGame.classList = 'button button__start-game button__hiding';
+    buttonStartGame.textContent = 'Старт';
+
+    conteiner.appendChild(wrapper);
+    wrapper.appendChild(content);
+    content.appendChild(title);
+    content.appendChild(menubuttons);
+    menubuttons.appendChild(btn1);
+    menubuttons.appendChild(btn2);
+    menubuttons.appendChild(btn3);
+    content.appendChild(buttonStartGame);
+
+    const buttonLvlSelec = document.querySelectorAll('.button__lvl');
+    buttonLvlSelec.forEach((btn) => {
+        btn.addEventListener('click', (event) => {
+            const target = event.target;
+            const textContent = target.textContent;
+            if (textContent === '1') {
+                window.application.levels = textContent;
+                target.classList.add('add__color');
+                btn2.classList.remove('add__color');
+                btn3.classList.remove('add__color');
+            } else if (textContent === '2') {
+                window.application.levels = textContent;
+                target.classList.add('add__color');
+                btn1.classList.remove('add__color');
+                btn3.classList.remove('add__color');
+            } else if (textContent === '3') {
+                window.application.levels = textContent;
+                target.classList.add('add__color');
+                btn1.classList.remove('add__color');
+                btn2.classList.remove('add__color');
+            }
+            buttonStart.disabled = false;
+            buttonStart.classList.remove('button__hiding');
+        });
     });
-});
-console.log(window.application.levels);
+    const buttonStart = document.querySelector('.button__start-game');
+    buttonStart.disabled = true;
 
-const buttonStart = document.querySelector('.button__start');
-buttonStart.disabled = true;
-
-buttonStart.addEventListener('click', () => {
-    if (window.application.levels === '1') {
-        location.href = '/screen2copy.html';
-    } else if (window.application.levels === '2') {
-        // location.href = '/screen2copy.html';
-    } else if (window.application.levels === '3') {
-        location.href = '/screen2copy.html';
-    }
-});
+    buttonStart.addEventListener('click', () => {
+        if (window.application.levels === '1') {
+            window.application.renderScreen('renderoneScreenGameCard');
+        } else if (window.application.levels === '2') {
+            console.log(2);
+        } else if (window.application.levels === '3') {
+            console.log(3);
+        }
+    });
+}
+window.application.screens['renderone_screen'] = oneScreen;

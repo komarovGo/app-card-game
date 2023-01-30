@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "StratosSkyeng";
   src: url(/fonts/stratosskyeng-regular.otf) format("ttf"), url(/fonts/stratosskyengweb-regular.woff) format("woff");
@@ -19,15 +18,24 @@
   margin: 0px;
 }
 
+.conteiner {
+  margin-bottom: -20px;
+}
+
 .wrapper {
   height: 100vh;
-  width: 100%;
   background-color: #004980;
-  justify-content: space-evenly;
+  width: 100%;
 }
 .wrapper__screen1 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+.wrapper__screen2 {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -38,250 +46,108 @@
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 .content__screen2 {
-  padding: 22px;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 950px;
 }
 
-.title_text {
-  font-family: "StratosSkyeng";
-  font-weight: 400;
+.title {
+  width: 208px;
+  height: 96px;
   font-size: 40px;
   line-height: 48px;
-  color: #004980;
   text-align: center;
+  color: #004980;
 }
 
-.namber_lvl {
+.button__lvl {
   display: flex;
   gap: 24px;
 }
 
-.button__lvl {
-  width: 100px;
-  height: 100px;
+.btn {
+  background: #ffffff;
   border-radius: 12px;
-  border: transparent;
-  cursor: pointer;
+  width: 98px;
+  height: 98px;
   font-family: "StratosSkyeng";
-  font-weight: 400;
   font-size: 64px;
   line-height: 72px;
   color: #0080c1;
-}
-
-.add__color {
-  background-color: darkblue;
+  border-color: transparent;
 }
 
 .button {
-  cursor: pointer;
-  width: 246px;
-  height: 50px;
   background: #7ac100;
   border-radius: 12px;
-  border: transparent;
+  width: 246px;
+  height: 50px;
+  border-color: transparent;
   font-family: "StratosSkyeng";
+  font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 32px;
-  color: white;
+  color: #ffffff;
 }
 .button__hiding {
   background-color: gray;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.watch {
-  font-family: "StratosSkyeng";
-  font-weight: 400;
-  font-size: 64px;
-  line-height: 72px;
-  color: #ffffff;
-  position: relative;
-  bottom: 15px;
-}
-.watch__finish {
-  color: black;
+.add__color {
+  background-color: #7ac100;
 }
 
 .min-sec {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  top: 10px;
+  padding-right: 7px;
   font-family: "StratosSkyeng";
+  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
   color: #ffffff;
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 5px;
 }
 
 .min {
   padding-right: 55px;
 }
 
-.numbers {
+.watch {
   display: flex;
+  font-family: "StratosSkyeng";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 72px;
+  color: #ffffff;
 }
 
-.ryad {
-  width: 100%;
+.card-field {
   display: flex;
+  width: 975px;
+  height: 543px;
   flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.field-card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.card-box {
-  width: 95px;
-  height: 133px;
-  background: #ffffff;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 30px;
   justify-content: center;
   align-items: center;
 }
 
-.card_bagraund {
+.shirt {
   width: 83px;
   height: 121px;
-  background-image: url(../static/cover-card.svg);
-  background-position: center;
-  background-size: cover;
-  background-color: #e4fbff;
+  background: #E4FBFF;
   border-radius: 4px;
-}
-
-.h2 {
-  font-size: 24px;
-  line-height: 32px;
-}
-
-.card {
-  width: 83px;
-  height: 121px;
-  background-position: center;
-  background-color: #e4fbff;
-  border-radius: 4px;
-}
-.card__t-v {
-  background-image: url(../static/card/P/туз\ пики.jpg);
-}
-.card__k-v {
-  background-image: url(../static/card/P/KP.svg);
-}
-.card__d-v {
-  background-image: url(../static/card/P/DP.svg);
-}
-.card__v-v {
-  background-image: url(../static/card/P/JP.svg);
-}
-.card__10-v {
-  background-image: url(../static/card/P/10P.svg);
-}
-.card__9-v {
-  background-image: url(../static/card/P/9P.svg);
-}
-.card__8-v {
-  background-image: url(../static/card/P/8P.svg);
-}
-.card__7-v {
-  background-image: url(../static/card/P/7P.svg);
-}
-.card__6-v {
-  background-image: url(../static/card/P/6P.svg);
-}
-.card__t-ch {
-  background-image: url(../static/card/ch/t-ch.svg);
-}
-.card__k-ch {
-  background-image: url(../static/card/ch/k-ch.svg);
-}
-.card__d-ch {
-  background-image: url(../static/card/ch/d-ch.svg);
-}
-.card__v-ch {
-  background-image: url(../static/card/ch/v-ch.svg);
-}
-.card__10-ch {
-  background-image: url(../static/card/ch/10-ch.svg);
-}
-.card__9-ch {
-  background-image: url(../static/card/ch/9-ch.svg);
-}
-.card__8-ch {
-  background-image: url(../static/card/ch/8-ch.svg);
-}
-.card__7-ch {
-  background-image: url(../static/card/ch/7-ch.svg);
-}
-.card__6-ch {
-  background-image: url(../static/card/ch/6-ch.svg);
-}
-.card__t-b {
-  background-image: url(../static/card/b/t-b.svg);
-}
-.card__k-b {
-  background-image: url(../static/card/b/k-b.svg);
-}
-.card__d-b {
-  background-image: url(../static/card/b/d-b.svg);
-}
-.card__v-b {
-  background-image: url(../static/card/b/v-b.svg);
-}
-.card__10-b {
-  background-image: url(../static/card/b/10-b.svg);
-}
-.card__9-b {
-  background-image: url(../static/card/b/9-b.svg);
-}
-.card__8-b {
-  background-image: url(../static/card/b/8-b.svg);
-}
-.card__7-b {
-  background-image: url(../static/card/b/7-b.svg);
-}
-.card__6-b {
-  background-image: url(../static/card/b/6-b.svg);
-}
-.card__t-k {
-  background-image: url(../static/card/k/TK.svg);
-}
-.card__k-k {
-  background-image: url(../static/card/k/KK.svg);
-}
-.card__d-k {
-  background-image: url(../static/card/k/DK.svg);
-}
-.card__v-k {
-  background-image: url(../static/card/k/VK.svg);
-}
-.card__10-k {
-  background-image: url(../static/card/k/10K.svg);
-}
-.card__9-k {
-  background-image: url(../static/card/k/9K.svg);
-}
-.card__8-k {
-  background-image: url(../static/card/k/8K.svg);
-}
-.card__7-k {
-  background-image: url(../static/card/k/7K.svg);
-}
-.card__6-k {
-  background-image: url(../static/card/k/6K.svg);
+  padding: 6px;
+  display: none;
 }/*# sourceMappingURL=style.css.map */
