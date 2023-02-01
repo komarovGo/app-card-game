@@ -1,3 +1,5 @@
+import './screen2.js';
+import './style.css';
 
 window.application = {
     blocks: {},
