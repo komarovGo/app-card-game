@@ -102,8 +102,7 @@ function oneScreen() {
         } else if (window.application.levels === '2') {
             window.application.renderScreen('renderHardGame');
         } else if (window.application.levels === '3') {
-            // window.application.renderScreen('renderHardGame');
-            window.application.renderScreen('rendelossScreen');
+            window.application.renderScreen('renderHardGame');
         }
     });
 }
