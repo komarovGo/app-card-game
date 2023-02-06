@@ -1,5 +1,7 @@
-// import './screen2.js';
-// import './style.css';
+import './screen2.js';
+import './style.css';
+import './lossWin.js';
+
 
 window.application = {
     blocks: {},
@@ -107,3 +109,4 @@ function oneScreen() {
     });
 }
 window.application.screens['renderone_screen'] = oneScreen;
+window.application.renderScreen('renderone_screen');

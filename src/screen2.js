@@ -73,7 +73,7 @@ function BlocksGameCard() {
 
     setTimeout(() => {
         taimer();
-    }, 1000);
+    }, 5000);
 
     buttonStartOver.addEventListener('click', () => {
         window.application.renderScreen('renderone_screen');
