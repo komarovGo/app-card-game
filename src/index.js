@@ -1,5 +1,7 @@
 import './screen2.js';
 import './style.css';
+import './lossWin.js';
+
 
 window.application = {
     blocks: {},
@@ -8,24 +10,30 @@ window.application = {
     watch: [],
     cards: {},
     clickUserCard: {},
+    conteiner: document.querySelector('.conteiner'),
+    cardField: document.querySelector('.card-field'),
     renderScreen: function (screenName) {
-        this.screens[screenName]();
+        if (!window.application.screens[screenName]) {
+            console.warn('Такой страницы нет');
+        } else {
+            window.application.conteiner.innerHTML = '';
+            window.application.cardField.innerHTML = '';
+
+            this.screens[screenName]();
+        }
     },
-    renderBlock: function (blockName, container) {
+    renderBlock: function (blockName, conteiner) {
         if (!window.application.blocks[blockName]) {
             console.log('Такого блока нет');
         } else {
-            this.blocks[blockName](container);
+            this.blocks[blockName](conteiner);
         }
     },
 };
 
 // Начальный экран
 function oneScreen() {
-    const conteiner = document.querySelector('.conteiner');
-    conteiner.innerHTML = '';
     const wrapper = document.createElement('div');
-    wrapper.classList = 'wrapper wrapper__screen1';
 
     const content = document.createElement('div');
     content.classList = 'content content__screen1';
@@ -52,8 +60,8 @@ function oneScreen() {
     const buttonStartGame = document.createElement('button');
     buttonStartGame.classList = 'button button__start-game button__hiding';
     buttonStartGame.textContent = 'Старт';
+    window.application.conteiner.appendChild(wrapper);
 
-    conteiner.appendChild(wrapper);
     wrapper.appendChild(content);
     content.appendChild(title);
     content.appendChild(menubuttons);
@@ -92,12 +100,13 @@ function oneScreen() {
 
     buttonStart.addEventListener('click', () => {
         if (window.application.levels === '1') {
-            window.application.renderScreen('renderoneScreenGameCard');
+            window.application.renderScreen('renderHardGame');
         } else if (window.application.levels === '2') {
-            console.log(2);
+            window.application.renderScreen('renderHardGame');
         } else if (window.application.levels === '3') {
-            console.log(3);
+            window.application.renderScreen('renderHardGame');
         }
     });
 }
 window.application.screens['renderone_screen'] = oneScreen;
+window.application.renderScreen('renderone_screen');

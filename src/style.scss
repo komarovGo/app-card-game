@@ -1,22 +1,9 @@
 @font-face {
     font-family: 'StratosSkyeng';
-    src: url(/fonts/stratosskyeng-regular.otf) format('ttf'),
-        url(/fonts/stratosskyengweb-regular.woff) format('woff');
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: 'StratosSkyeng';
-    src: url(/fonts/stratosskyeng-medium.otf) format('ttf'),
-        url(/fonts/stratosskyengweb-medium.woff) format('woff');
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: 'StratosSkyeng';
-    src: url(/fonts/stratosskyeng-bold.otf) format('ttf'),
-        url(/fonts/stratosskyengweb-bold.woff2) format('woff');
-    font-weight: 700;
+    src: url('../fonts/stratosskyengweb-regular.woff') format('woff'),
+        url('../fonts/stratosskyengweb-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
 
 * {
@@ -25,25 +12,16 @@
 }
 
 .conteiner {
-    margin-bottom: -20px;
-}
-
-.wrapper {
     height: 100vh;
     background-color: #004980;
     width: 100%;
-    &__screen1 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    &__screen2 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
 .content {
     &__screen1 {
         width: 480px;
@@ -62,6 +40,17 @@
         align-items: flex-end;
         width: 950px;
     }
+    &__loss-win {
+        width: 480px;
+        height: 459px;
+        background: #c2f5ff;
+        border-radius: 12px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 }
 
 .title {
@@ -69,8 +58,13 @@
     height: 96px;
     font-size: 40px;
     line-height: 48px;
+    font-family: 'StratosSkyeng';
+    font-style: normal;
     text-align: center;
     color: #004980;
+    &__loss {
+        width: 276px;
+    }
 }
 
 .button__lvl {
@@ -140,31 +134,58 @@
     font-size: 64px;
     line-height: 72px;
     color: #ffffff;
+    &__loss {
+        color: #000000;
+
+        margin-bottom: 30px;
+    }
 }
 
 .card-field {
     display: flex;
-    width: 975px;
+    width: 842px;
     height: 543px;
     flex-wrap: wrap;
-    flex-direction: column;
     gap: 30px;
     justify-content: center;
     align-items: center;
+    align-content: center;
 }
 
-.card{
+.card {
+    position: relative;
+    z-index: 1;
 }
 
-.shirt{
-width: 83px;
-height: 121px;
-background: #E4FBFF;
-border-radius: 4px;
-padding : 6px;
-display: none;
+.box {
+    width: 95px;
+    height: 133px;
+}
+.shirt {
+    width: 83px;
+    height: 121px;
+    background: #e4fbff;
+    border-radius: 4px;
+    padding: 6px;
+    position: relative;
+    bottom: 133px;
 }
 
-.shirt_pick{
-    
+.shirt_pick {
+    z-index: 2;
+}
+
+.emoji {
+    width: 90px;
+    height: 90px;
+    margin-top: 22px;
+}
+
+.paragraph {
+    font-family: 'StratosSkyeng';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000000;
 }
