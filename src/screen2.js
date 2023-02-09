@@ -63,8 +63,12 @@ function BlocksGameCard() {
             peremenSeconds = 0;
             m.innerHTML = `0${peremenMinuts}.`;
         }
+        if (peremenMinuts > 9) {
+            m.innerHTML = `${peremenMinuts}.`;
+        }
 
         window.application.watch = `${nemberMin.textContent}${nemberSecond.textContent}`;
+        console.log(window.application.watch);
     }
 
     function taimer() {
@@ -76,6 +80,10 @@ function BlocksGameCard() {
     }, 5000);
 
     buttonStartOver.addEventListener('click', () => {
+        console.log(`Время на игру - ${window.application.watch}`);
+        window.application.idCards = [];
+        console.log(`Время на игру - ${window.application.idCards}`);
+
         window.application.renderScreen('renderone_screen');
     });
 }
@@ -91,6 +99,7 @@ function blockCardField() {
     const cardTBshirt = document.createElement('img');
     cardTBshirt.src = './static/cover-card.svg';
     cardTBshirt.classList = 'shirt';
+    cardTBshirt.id = 'tus';
 
     tus.appendChild(cardTB);
     tus.appendChild(cardTBshirt);
@@ -103,33 +112,36 @@ function blockCardField() {
     const cardTCHshirt = document.createElement('img');
     cardTCHshirt.src = './static/cover-card.svg';
     cardTCHshirt.classList = 'shirt';
+    cardTCHshirt.id = 'tus';
 
     tus2.appendChild(cardTCH);
     tus2.appendChild(cardTCHshirt);
 
-    const karol = document.createElement('div');
-    karol.classList = 'box';
+    const korol = document.createElement('div');
+    korol.classList = 'box';
     const cardKK = document.createElement('img');
     cardKK.src = './static/card/k/KK.svg';
     cardKK.classList = 'card';
     const cardKKshirt = document.createElement('img');
     cardKKshirt.src = './static/cover-card.svg';
     cardKKshirt.classList = 'shirt';
+    cardKKshirt.id = 'korol';
 
-    karol.appendChild(cardKK);
-    karol.appendChild(cardKKshirt);
+    korol.appendChild(cardKK);
+    korol.appendChild(cardKKshirt);
 
-    const karol2 = document.createElement('div');
-    karol2.classList = 'box';
+    const korol2 = document.createElement('div');
+    korol2.classList = 'box';
     const cardKP = document.createElement('img');
     cardKP.src = './static/card/P/KP.svg';
     cardKP.classList = 'card';
     const cardKPshirt = document.createElement('img');
     cardKPshirt.src = './static/cover-card.svg';
     cardKPshirt.classList = 'shirt';
+    cardKPshirt.id = 'korol';
 
-    karol2.appendChild(cardKP);
-    karol2.appendChild(cardKPshirt);
+    korol2.appendChild(cardKP);
+    korol2.appendChild(cardKPshirt);
 
     const dama = document.createElement('div');
     dama.classList = 'box';
@@ -139,6 +151,7 @@ function blockCardField() {
     const cardDBshirt = document.createElement('img');
     cardDBshirt.src = './static/cover-card.svg';
     cardDBshirt.classList = 'shirt';
+    cardDBshirt.id = 'dama';
 
     dama.appendChild(cardDB);
     dama.appendChild(cardDBshirt);
@@ -151,6 +164,7 @@ function blockCardField() {
     const cardDCHshirt = document.createElement('img');
     cardDCHshirt.src = './static/cover-card.svg';
     cardDCHshirt.classList = 'shirt';
+    cardDCHshirt.id = 'dama';
 
     dama2.appendChild(cardDCH);
     dama2.appendChild(cardDCHshirt);
@@ -163,6 +177,7 @@ function blockCardField() {
     const cardVKshirt = document.createElement('img');
     cardVKshirt.src = './static/cover-card.svg';
     cardVKshirt.classList = 'shirt';
+    cardVKshirt.id = 'valet';
 
     valet.appendChild(cardVK);
     valet.appendChild(cardVKshirt);
@@ -175,6 +190,7 @@ function blockCardField() {
     const cardVPshirt = document.createElement('img');
     cardVPshirt.src = './static/cover-card.svg';
     cardVPshirt.classList = 'shirt';
+    cardVPshirt.id = 'valet';
 
     valet2.appendChild(cardVP);
     valet2.appendChild(cardVPshirt);
@@ -187,6 +203,7 @@ function blockCardField() {
     const cardTenBshirt = document.createElement('img');
     cardTenBshirt.src = './static/cover-card.svg';
     cardTenBshirt.classList = 'shirt';
+    cardTenBshirt.id = 'ten';
 
     ten.appendChild(cardTenB);
     ten.appendChild(cardTenBshirt);
@@ -199,6 +216,7 @@ function blockCardField() {
     const cardTenCHshirt = document.createElement('img');
     cardTenCHshirt.src = './static/cover-card.svg';
     cardTenCHshirt.classList = 'shirt';
+    cardTenCHshirt.id = 'ten';
 
     ten2.appendChild(cardTenCH);
     ten2.appendChild(cardTenCHshirt);
@@ -211,6 +229,7 @@ function blockCardField() {
     const cardNineKshirt = document.createElement('img');
     cardNineKshirt.src = './static/cover-card.svg';
     cardNineKshirt.classList = 'shirt';
+    cardNineKshirt.id = 'nine';
 
     nine.appendChild(cardNineK);
     nine.appendChild(cardNineKshirt);
@@ -223,6 +242,7 @@ function blockCardField() {
     const cardNinePshirt = document.createElement('img');
     cardNinePshirt.src = './static/cover-card.svg';
     cardNinePshirt.classList = 'shirt';
+    cardNinePshirt.id = 'nine';
 
     nine2.appendChild(cardNineP);
     nine2.appendChild(cardNinePshirt);
@@ -235,6 +255,7 @@ function blockCardField() {
     const cardEightBshirt = document.createElement('img');
     cardEightBshirt.src = './static/cover-card.svg';
     cardEightBshirt.classList = 'shirt';
+    cardEightBshirt.id = 'eight';
 
     eight.appendChild(cardEightB);
     eight.appendChild(cardEightBshirt);
@@ -247,6 +268,7 @@ function blockCardField() {
     const cardEightCHshirt = document.createElement('img');
     cardEightCHshirt.src = './static/cover-card.svg';
     cardEightCHshirt.classList = 'shirt';
+    cardEightCHshirt.id = 'eight';
 
     eight2.appendChild(cardEightCH);
     eight2.appendChild(cardEightCHshirt);
@@ -259,6 +281,7 @@ function blockCardField() {
     const cardSevenKshirt = document.createElement('img');
     cardSevenKshirt.src = './static/cover-card.svg';
     cardSevenKshirt.classList = 'shirt';
+    cardSevenKshirt.id = 'seven';
 
     seven.appendChild(cardSevenK);
     seven.appendChild(cardSevenKshirt);
@@ -271,6 +294,7 @@ function blockCardField() {
     const cardSevenPshirt = document.createElement('img');
     cardSevenPshirt.src = './static/cover-card.svg';
     cardSevenPshirt.classList = 'shirt';
+    cardSevenPshirt.id = 'seven';
 
     seven2.appendChild(cardSevenP);
     seven2.appendChild(cardSevenPshirt);
@@ -283,6 +307,7 @@ function blockCardField() {
     const cardSixBshirt = document.createElement('img');
     cardSixBshirt.src = './static/cover-card.svg';
     cardSixBshirt.classList = 'shirt';
+    cardSixBshirt.id = 'six';
 
     six.appendChild(cardSixB);
     six.appendChild(cardSixBshirt);
@@ -295,6 +320,7 @@ function blockCardField() {
     const cardSixCHshirt = document.createElement('img');
     cardSixCHshirt.src = './static/cover-card.svg';
     cardSixCHshirt.classList = 'shirt';
+    cardSixCHshirt.id = 'six';
 
     six2.appendChild(cardSixCH);
     six2.appendChild(cardSixCHshirt);
@@ -302,8 +328,8 @@ function blockCardField() {
     let boxCard = [
         tus,
         tus2,
-        karol,
-        karol2,
+        korol,
+        korol2,
         dama,
         dama2,
         valet,
@@ -329,7 +355,6 @@ function blockCardField() {
     sortCard(boxCard);
 
     window.application.cards = boxCard;
-
     let shirtCard = [
         cardTBshirt,
         cardTCHshirt,
@@ -364,8 +389,23 @@ function blockCardField() {
         pick.addEventListener('click', (event) => {
             const target = event.target;
             target.classList.remove('shirt_pick');
+            console.log(target.id);
+            window.application.idCards.push(target.id);
+            if (window.application.idCards.length === 2) {
+                comparison();
+            }
         });
     });
+
+    function comparison() {
+        if (window.application.idCards[0] === window.application.idCards[1]) {
+            window.application.idCards = [];
+            window.application.renderScreen('rendeWinScreen');
+        } else {
+            window.application.idCards = [];
+            window.application.renderScreen('rendelossScreen');
+        }
+    }
 }
 
 window.application.blocks['renderBlockCardField'] = blockCardField;
@@ -408,4 +448,4 @@ function renderGameScreen() {
     window.application.renderBlock('renderBlockCardField');
     window.application.renderBlock('renderBlockPlayingField');
 }
-window.application.screens['renderHardGame'] = renderGameScreen;
+window.application.screens['renderGame'] = renderGameScreen;
