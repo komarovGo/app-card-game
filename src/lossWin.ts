@@ -2,26 +2,26 @@ function lossScreen() {
     const wrapper = document.createElement('div');
 
     const content = document.createElement('div');
-    content.classList = 'content content__loss-win';
+    content.classList.add('content content__loss-win') ;
 
     const emoji = document.createElement('img');
     emoji.src = './static/smail.svg';
-    emoji.classList = 'emoji';
+    emoji.classList.add('emoji') ;
 
     const title = document.createElement('h2');
-    title.classList = 'title title__loss';
+    title.classList.add('title title__loss') ;
     title.textContent = 'Вы проиграли!';
 
     const paragraph = document.createElement('h2');
-    paragraph.classList = 'paragraph';
+    paragraph.classList.add('paragraph') ;
     paragraph.textContent = 'Затраченное время:';
 
     const minuts = document.createElement('div');
-    minuts.classList = 'watch watch__loss';
+    minuts.classList.add('watch watch__loss') ;
     minuts.textContent = window.application.watch;
 
     const buttonStartGame = document.createElement('button');
-    buttonStartGame.classList = 'button button__start-over';
+    buttonStartGame.classList.add('button button__start-over');
     buttonStartGame.textContent = 'Играть снова';
 
     wrapper.appendChild(content);
@@ -44,26 +44,26 @@ function WinScreen() {
     const wrapper = document.createElement('div');
 
     const content = document.createElement('div');
-    content.classList = 'content content__loss-win';
+    content.classList.add('content content__loss-win') ;
 
     const emoji = document.createElement('img');
     emoji.src = './static/Image.svg';
-    emoji.classList = 'emoji';
+    emoji.classList.add('emoji') ;
 
     const title = document.createElement('h2');
-    title.classList = 'title title__loss';
+    title.classList.add('title title__loss') ;
     title.textContent = 'Вы выиграли!';
 
     const paragraph = document.createElement('h2');
-    paragraph.classList = 'paragraph';
+    paragraph.classList.add('paragraph') ;
     paragraph.textContent = 'Затраченное время:';
 
     const minuts = document.createElement('div');
-    minuts.classList = 'watch watch__loss';
+    minuts.classList.add('watch watch__loss') ;
     minuts.textContent = window.application.watch;
 
     const buttonStartGame = document.createElement('button');
-    buttonStartGame.classList = 'button button__start-over';
+    buttonStartGame.classList.add('button button__start-over');
     buttonStartGame.textContent = 'Играть снова';
 
     wrapper.appendChild(content);

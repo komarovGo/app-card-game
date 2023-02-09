@@ -1,3 +1,11 @@
+declare global {
+    interface Window {
+        application: any;
+    }
+}
+
+// let application = window.application;
+
 window.application = {
     blocks: {},
     screens: {},
@@ -8,7 +16,7 @@ window.application = {
     clickUserCard: {},
     conteiner: document.querySelector('.conteiner'),
     cardField: document.querySelector('.card-field'),
-    renderScreen: function (screenName) {
+    renderScreen: function (screenName: string) {
         if (!window.application.screens[screenName]) {
             console.warn('Такой страницы нет');
         } else {
@@ -17,7 +25,7 @@ window.application = {
             this.screens[screenName]();
         }
     },
-    renderBlock: function (blockName, conteiner) {
+    renderBlock: function (blockName: string, conteiner: object) {
         if (!window.application.blocks[blockName]) {
             console.log('Такого блока нет');
         } else {
@@ -31,29 +39,29 @@ function oneScreen() {
     const wrapper = document.createElement('div');
 
     const content = document.createElement('div');
-    content.classList = 'content content__screen1';
+    content.classList.add('content content__screen1');
 
     const title = document.createElement('h2');
-    title.classList = 'title';
+    title.classList.add('title');
     title.textContent = 'Выбери сложность';
 
     const menubuttons = document.createElement('div');
-    menubuttons.classList = 'button__lvl';
+    menubuttons.classList.add('button__lvl');
 
     const btn1 = document.createElement('button');
-    btn1.classList = 'btn btn-1';
+    btn1.classList.add('btn btn-1');
     btn1.textContent = '1';
 
     const btn2 = document.createElement('button');
-    btn2.classList = 'btn btn-2';
+    btn2.classList.add('btn btn-2');
     btn2.textContent = '2';
 
     const btn3 = document.createElement('button');
-    btn3.classList = 'btn btn-3';
+    btn3.classList.add('btn btn-3');
     btn3.textContent = '3';
 
     const buttonStartGame = document.createElement('button');
-    buttonStartGame.classList = 'button button__start-game button__hiding';
+    buttonStartGame.classList.add('button button__start-game button__hiding');
     buttonStartGame.textContent = 'Старт';
     window.application.conteiner.appendChild(wrapper);
 
@@ -68,7 +76,7 @@ function oneScreen() {
     const buttonLvlSelec = document.querySelectorAll('.button__lvl');
     buttonLvlSelec.forEach((btn) => {
         btn.addEventListener('click', (event) => {
-            const target = event.target;
+            const target: any = event.target;
             const textContent = target.textContent;
             if (textContent === '1') {
                 window.application.levels = textContent;
@@ -90,7 +98,7 @@ function oneScreen() {
             buttonStart.classList.remove('button__hiding');
         });
     });
-    const buttonStart = document.querySelector('.button__start-game');
+    const buttonStart: any = document.querySelector('.button__start-game');
     buttonStart.disabled = true;
 
     buttonStart.addEventListener('click', () => {

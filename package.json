@@ -9,7 +9,8 @@
         "lint:js": "eslint ./**/*.js",
         "lint:css": "stylelint ./**/*.scss --fix",
         "build": "webpack",
-        "start": "webpack-dev-server --open"
+        "start": "webpack-dev-server --open",
+        "lint:ts": "tsc ––noEmit"
     },
     "repository": {
         "type": "git",
@@ -23,6 +24,7 @@
     },
     "homepage": "https://github.com/ckarnishon/skypro#readme",
     "devDependencies": {
+        "@types/lodash": "^4.14.191",
         "copy-webpack-plugin": "^11.0.0",
         "css-loader": "^6.7.3",
         "css-minimizer-webpack-plugin": "^4.2.2",
