@@ -2,11 +2,11 @@
     "name": "git-task1",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "index.ts",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "format": "prettier --write ./",
-        "lint:js": "eslint ./**/*.js",
+        "lint:js": "eslint ./**/*.ts",
         "lint:css": "stylelint ./**/*.scss --fix",
         "build": "webpack",
         "start": "webpack-dev-server --open",
@@ -44,7 +44,10 @@
     },
     "dependencies": {
         "@babel/eslint-parser": "^7.19.1",
+        "@typescript-eslint/eslint-plugin": "^5.52.0",
+        "@typescript-eslint/parser": "^5.52.0",
         "html-webpack-plugin": "^5.5.0",
-        "stylelint-scss": "^4.3.0"
+        "stylelint-scss": "^4.3.0",
+        "webpack": "^5.75.0"
     }
 }

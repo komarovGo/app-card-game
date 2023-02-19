@@ -50,5 +50,5 @@ module.exports = {
     optimization: {
         minimizer: ['...', new CssMinimizerPlugin()],
     },
-    devtool: isProduction ? 'hidden-source-map' : 'source-map', // Для отслеживания ошибок
+    devtool: isProduction ? 'hidden-source-map' : 'source-map',
 };

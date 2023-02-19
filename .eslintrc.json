@@ -6,11 +6,8 @@
     },
     "extends": ["eslint:recommended", "prettier"],
     "plugins": ["prettier"],
-    "parser": "@babel/eslint-parser",
     "parserOptions": {
-        "ecmaVersion": 2020,
-        "requireConfigFile": false,  
-        "sourceType": "module"
+        "ecmaVersion": 2020
     },
     "rules": {
         "prettier/prettier": "error",
