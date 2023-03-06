@@ -34,7 +34,6 @@ window.application = {
     },
 };
 
-
 function oneScreen() {
     const wrapper = document.createElement('div');
 
@@ -49,20 +48,27 @@ function oneScreen() {
     const menubuttons = document.createElement('div');
     menubuttons.classList.add('button__lvl');
 
-    const btn1 = document.createElement('button');
-    btn1.classList.add('btn');
-    btn1.classList.add('btn-1');
-    btn1.textContent = '1';
-
-    const btn2 = document.createElement('button');
-    btn2.classList.add('btn');
-    btn2.classList.add('btn-2');
-    btn2.textContent = '2';
-
-    const btn3 = document.createElement('button');
-    btn3.classList.add('btn');
-    btn3.classList.add('btn-3');
-    btn3.textContent = '3';
+    const buttonListData = [
+        {
+            class: 'btn-1',
+            text: '1',
+        },
+        {
+            class: 'btn-2',
+            text: '2',
+        },
+        {
+            class: 'btn-3',
+            text: '3',
+        },
+    ];
+    
+    buttonListData.forEach((buttonItem) => {
+        const button = document.createElement('button');
+        button.classList.add(buttonItem.class);
+        button.textContent = buttonItem.text;
+        menubuttons.appendChild(button);
+    });
 
     const buttonStartGame = document.createElement('button');
     buttonStartGame.classList.add('button');
@@ -74,32 +80,29 @@ function oneScreen() {
     wrapper.appendChild(content);
     content.appendChild(title);
     content.appendChild(menubuttons);
-    menubuttons.appendChild(btn1);
-    menubuttons.appendChild(btn2);
-    menubuttons.appendChild(btn3);
     content.appendChild(buttonStartGame);
-    
-    
+
     const buttonLvlSelec = document.querySelectorAll('.button__lvl');
     buttonLvlSelec.forEach((btn) => {
         btn.addEventListener('click', (event) => {
             const target: any = event.target;
+            console.log(btn.children[2]);
             const textContent = target.textContent;
             if (textContent === '1') {
                 window.application.levels = textContent;
                 target.classList.add('add__color');
-                btn2.classList.remove('add__color');
-                btn3.classList.remove('add__color');
+                btn.children[1].classList.remove('add__color');
+                btn.children[2].classList.remove('add__color');
             } else if (textContent === '2') {
                 window.application.levels = textContent;
                 target.classList.add('add__color');
-                btn1.classList.remove('add__color');
-                btn3.classList.remove('add__color');
+                btn.children[0].classList.remove('add__color');
+                btn.children[2].classList.remove('add__color');
             } else if (textContent === '3') {
                 window.application.levels = textContent;
                 target.classList.add('add__color');
-                btn1.classList.remove('add__color');
-                btn2.classList.remove('add__color');
+                btn.children[0].classList.remove('add__color');
+                btn.children[1].classList.remove('add__color');
             }
             buttonStart.disabled = false;
             buttonStart.classList.remove('button__hiding');
@@ -117,12 +120,9 @@ function oneScreen() {
             window.application.renderScreen('renderGame');
         }
     });
-    
-    
 }
 window.application.screens['renderone_screen'] = oneScreen;
 window.application.renderScreen('renderone_screen');
-
 
 function BlocksGameCard() {
     const content = document.createElement('div');
@@ -207,7 +207,7 @@ function BlocksGameCard() {
         taimer();
     }, 5000);
 
-    buttonStartOver.addEventListener('click', () => {       
+    buttonStartOver.addEventListener('click', () => {
         window.application.idCards = [];
         window.application.renderScreen('renderone_screen');
     });
@@ -480,7 +480,7 @@ function blockCardField() {
     sortCard(boxCard);
 
     window.application.cards = boxCard;
-    let shirtCard: any[]= [
+    let shirtCard: any[] = [
         cardTBshirt,
         cardTCHshirt,
         cardKKshirt,
@@ -501,8 +501,6 @@ function blockCardField() {
         cardSixCHshirt,
     ];
 
-    console.log(shirtCard[0].classList[0]);
-
     function reversCard(shirtCard: any) {
         for (let i = 0; i < shirtCard.length; i++) {
             shirtCard[i].classList.add('shirt_pick');
@@ -516,10 +514,11 @@ function blockCardField() {
         pick.addEventListener('click', (event) => {
             const target: any = event.target;
             target.classList.remove('shirt_pick');
-            console.log(target.id);
             window.application.idCards.push(target.id);
             if (window.application.idCards.length === 2) {
-                comparison();
+                setTimeout(() => {
+                    comparison();
+                }, 1000);
             }
         });
     });
@@ -576,7 +575,6 @@ function renderGameScreen() {
     window.application.renderBlock('renderBlockPlayingField');
 }
 window.application.screens['renderGame'] = renderGameScreen;
-
 
 function lossScreen() {
     const wrapper = document.createElement('div');

@@ -11,6 +11,10 @@
     margin: 0px;
 }
 
+body{
+    font-family: 'StratosSkyeng';
+}
+
 .conteiner {
     height: 100vh;
     background-color: #004980;
@@ -72,7 +76,45 @@
     gap: 24px;
 }
 
-.btn {
+// .btn {
+//     background: #ffffff;
+//     border-radius: 12px;
+//     width: 98px;
+//     height: 98px;
+
+//     font-family: 'StratosSkyeng';
+//     font-size: 64px;
+//     line-height: 72px;
+//     color: #0080c1;
+//     border-color: transparent;
+// }
+
+.btn-1{
+    background: #ffffff;
+    border-radius: 12px;
+    width: 98px;
+    height: 98px;
+
+    font-family: 'StratosSkyeng';
+    font-size: 64px;
+    line-height: 72px;
+    color: #0080c1;
+    border-color: transparent;
+}
+.btn-2{
+    background: #ffffff;
+    border-radius: 12px;
+    width: 98px;
+    height: 98px;
+
+    font-family: 'StratosSkyeng';
+    font-size: 64px;
+    line-height: 72px;
+    color: #0080c1;
+    border-color: transparent;
+}
+
+.btn-3{
     background: #ffffff;
     border-radius: 12px;
     width: 98px;
